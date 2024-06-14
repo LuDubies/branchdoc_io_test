@@ -17,7 +17,6 @@ Below is a visualization of an example workflow in a project. More information c
 - A small introduction on the [Continuous Integration](ci.md) deployed in the projects.
 
 ```mermaid
-%%{init: { 'gitGraph': {'showCommitLabel': false}} }%%
 gitGraph
     commit tag: "v1.0.0"
     branch release/v2.0.0
