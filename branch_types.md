@@ -1,9 +1,11 @@
 ## Branches
 
+This page will introduce the naming conventions for the different types of branches and highlight their specific use cases.
+
 ### Main branch
 
 The main branch (or default branch) is the singular branch existing on a new repository.
-As it is the branch that is represented as the projects current state by default, it is of the utmost importance to keep the software on the main branch in a stable state. Therefore direct work on the main branch is forbidden. Instead the branch is used to track the latest release version of the project.
+As it is the branch that is represented as the projects current state by default, it is most important to keep the software on the main branch in a stable state. Therefore direct work on the main branch is forbidden! Instead the branch is used to track the latest release version of the project.
 Releases on the main branch are tagged to allow a traceable overview of software releases.
 
 ```mermaid
@@ -19,7 +21,7 @@ gitGraph
 
 ### Release branches
 
-A release branch has the prefix `release/`. Big surprise here. The full branch name consists of the prefix and the **future** release version that will be published to main when the work on all features has been completed `release/<version>`.
+A release branch by convention has the prefix `release/`. The full branch name consists of the prefix and the **future** release version that will be published to main when the work on all features has been completed, like `release/<version>`.
 
 ```mermaid
 %%{init: { 'gitGraph': {'showCommitLabel': false}} }%%
@@ -64,7 +66,7 @@ gitGraph
 
 :warning: Merging to a release brach has to be done via pull request with accepted review. :warning:
 
-To track fixes on an already released tag, the release branch can be kept in use. See the [bugfix brach section below](#bugfix-branches).
+To track fixes for an already released tag, the release branch can be kept in use. See the [bugfix brach section below](#bugfix-branches).
 
 ### Feature branches
 
