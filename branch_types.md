@@ -26,12 +26,12 @@ A release branch has the prefix `release/`. Big surprise here. The full branch n
 gitGraph
    commit
    commit tag: "v1.0.0"
-   branch release/v2.0.0
+   branch release/v2.0.x
    commit
    commit
    commit
    checkout main
-   merge release/v2.0.0 tag: "v2.0.0"
+   merge release/v2.0.x tag: "v2.0.0"
 
 ```
 
@@ -44,27 +44,27 @@ In an ideal world, the work on release v3.0.0 can begin after release v2.0.0 is 
 gitGraph
    commit
    commit tag: "v1.0.0"
-   branch release/v2.0.0
+   branch release/v2.0.x
    commit
    commit
-   branch release/v3.0.0
+   branch release/v3.0.x
    commit
-   checkout release/v2.0.0
-   commit
-   checkout main
-   merge release/v2.0.0 tag: "v2.0.0"
-   checkout release/v3.0.0
-   merge release/v2.0.0
-   commit
+   checkout release/v2.0.x
    commit
    checkout main
-   merge release/v3.0.0 tag: "v3.0.0"
+   merge release/v2.0.x tag: "v2.0.0"
+   checkout release/v3.0.x
+   merge release/v2.0.x
+   commit
+   commit
+   checkout main
+   merge release/v3.0.x tag: "v3.0.0"
 
 ```
 
 :warning: Merging to a release brach has to be done via pull request with accepted review. :warning:
 
-To track fixes on a already released tag, a special release branch can be created. See the [bugfix brach section below](#bugfix-branches).
+To track fixes on an already released tag, the release branch can be kept in use. See the [bugfix brach section below](#bugfix-branches).
 
 ### Feature branches
 
@@ -76,21 +76,21 @@ Feature branch naming convention is a prefix plus the name of the feature to be 
 %%{init: { 'gitGraph': {'showCommitLabel': false}} }%%
 gitGraph
    commit tag: "v1.0.0"
-   branch release/v2.0.0
+   branch release/v2.0.x
    branch feature/multiuser_support
    commit
-   checkout release/v2.0.0
+   checkout release/v2.0.x
    branch feature/client_rework
    commit
    checkout feature/multiuser_support
    commit
    checkout feature/client_rework
    commit
-   checkout release/v2.0.0
+   checkout release/v2.0.x
    merge feature/multiuser_support
    merge feature/client_rework
    checkout main
-   merge release/v2.0.0 tag: "v2.0.0"
+   merge release/v2.0.x tag: "v2.0.0"
 ```
 
 
@@ -104,21 +104,21 @@ This allows for a cleaner main branch and the possibility to resolve issues in o
 %%{init: { 'gitGraph': {'showCommitLabel': false}} }%%
 gitGraph
     commit tag: "v3.0.0"
-    branch release/v4.0.0
-    commit
-    checkout main
-    merge release/v4.0.0 tag: "v4.0.0"
-    branch release/v5.0.0
-    commit
-    checkout main
     branch release/v4.0.x
+    commit
+    checkout main
+    merge release/v4.0.x tag: "v4.0.0"
+    branch release/v5.0.x
+    commit
+    checkout main
+    checkout release/v4.0.x
     branch bugfix/error_condition
     commit
     commit
     checkout release/v4.0.x
     merge bugfix/error_condition tag: "v4.0.1"
-    checkout release/v5.0.0
+    checkout release/v5.0.x
     commit
     checkout main
-    merge release/v5.0.0 tag: "v5.0.0"
+    merge release/v5.0.x tag: "v5.0.0"
 ```
