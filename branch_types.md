@@ -1,4 +1,4 @@
-## Branches
+# Branches
 
 This page will introduce the naming conventions for the different types of branches and highlight their specific use cases.
 
