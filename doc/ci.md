@@ -1,0 +1,3 @@
+# INFOS on CI WIP
+
+WIP WIP WIP
