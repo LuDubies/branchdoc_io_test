@@ -22,7 +22,8 @@ conf_py_path = "/doc/"  # with leading and trailing slashes
 extensions = [
     'sphinxcontrib.mermaid',  # Mermaid diagrams
     'myst_parser',  # MyST markdown parser
-    "sphinx_rtd_dark_mode"  # Dark mode
+    "sphinx_rtd_dark_mode",  # Dark mode
+    "sphinx_copybutton"  # Copy button
 ]
 
 templates_path = ['_templates']
