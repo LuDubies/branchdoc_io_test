@@ -41,5 +41,5 @@ mermaid_output_format = 'svg'
 mermaid_cmd = 'mmdc'
 mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
 
-if platform.system() == "Windows":
+if platform.system() != "Windows":
     mermaid_cmd_shell = 'true'
