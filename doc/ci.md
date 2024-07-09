@@ -1,3 +1,3 @@
-# INFOS on CI WIP
+# Continuous Integration
 
-WIP WIP WIP
+This page is still under construction ;)
