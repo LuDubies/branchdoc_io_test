@@ -4,7 +4,6 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import os.path
 import platform
 
 # -- Project information -----------------------------------------------------
@@ -43,6 +42,4 @@ mermaid_cmd = 'mmdc'
 mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
 
 if platform.system() == "Windows":
-    mermaid_cmd_shell = 'false'
-else:
     mermaid_cmd_shell = 'true'
