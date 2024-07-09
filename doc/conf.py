@@ -4,6 +4,8 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import platform
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -38,3 +40,6 @@ default_dark_mode = True
 mermaid_output_format = 'svg'
 mermaid_cmd = 'mmdc'
 mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
+
+if platform.system() == "Windows":
+    mermaid_cmd_shell = 'true'
