@@ -13,16 +13,25 @@ This documentation is intended to introduce the overall branching strategy to be
    :caption: Git:
    :maxdepth: 2
 
-   git.md
+   git/git.md
+   git/github.md
 
 
 .. toctree::
    :caption: Branches:
    :maxdepth: 2
 
-   branch_types.md
-   ci.md
-   pull_request.md
+   branches/branch_types.md
+   branches/pull_request.md
+
+
+.. toctree::
+   :caption: CI/CD:
+   :maxdepth: 2
+
+   ci/ci.md
+   ci/cd.md
+
 
 .. mermaid::
 

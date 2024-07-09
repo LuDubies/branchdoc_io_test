@@ -9,7 +9,7 @@ You can find information on where Pull REquests are mandatory on the [branches p
 
 ## Overview
 
-![image](images/pr_overview.png)
+![image](pr_overview.png)
 
 Show above is the UI for an example Pull Request.
 In the yellow box at the top, the source and target branch of the pull request are shown.
