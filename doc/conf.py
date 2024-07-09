@@ -38,7 +38,6 @@ exclude_patterns = [
 
 # HTML theme and static files
 html_theme = "sphinx_rtd_theme"
-html_show_sphinx = False
 html_last_updated_fmt = "%b %d, %Y"
 
 html_static_path = ["_static"]
