@@ -10,31 +10,42 @@ import platform
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Branchdoc'
-copyright = '2024, Luca Dubies'
-author = 'Luca Dubies'
+project = 'NewTec Git Guidelines'
+copyright = '2024 - present, NewTec GmbH'
+author = 'NewTec GmbH'
 release = '1.0.0'
-conf_py_path = "/doc/" # with leading and trailing slashes
+conf_py_path = "/doc/"  # with leading and trailing slashes
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinxcontrib.mermaid','myst_parser', "sphinx_rtd_dark_mode"]
+extensions = [
+    'sphinxcontrib.mermaid',  # Mermaid diagrams
+    'myst_parser',  # MyST markdown parser
+    "sphinx_rtd_dark_mode"  # Dark mode
+]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store'
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # HTML theme and static files
 html_theme = "sphinx_rtd_theme"
-html_static_path = ['_static']
-html_css_files = ['css/svg.css']
+html_show_sphinx = False
+html_last_updated_fmt = '%b %d, %Y'
 
-# HTML theme options
+html_static_path = ['_static']
+html_css_files = [
+    'css/svg.css'
+]
+
+# HTML dark theme options
 default_dark_mode = True
 
 # Mermaid configuration
