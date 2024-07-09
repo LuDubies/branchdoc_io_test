@@ -15,6 +15,7 @@ This documentation is intended to introduce the overall branching strategy to be
 
    git/git.md
    git/github.md
+   git/templates.md
 
 
 .. toctree::
