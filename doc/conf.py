@@ -36,5 +36,4 @@ default_dark_mode = True
 # Mermaid configuration
 mermaid_output_format = 'svg'
 mermaid_cmd = 'mmdc'
-mermaid_cmd_shell = "true"
 mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
