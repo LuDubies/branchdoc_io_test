@@ -38,7 +38,7 @@ default_dark_mode = True
 
 # Mermaid configuration
 mermaid_output_format = 'svg'
-mermaid_cmd = 'mmdc'
+mermaid_cmd = 'node_modules/.bin/mmdc'
 mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
 
 if platform.system() != "Windows":
