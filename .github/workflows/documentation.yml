@@ -1,22 +1,62 @@
 name: documentation
 
-on: [push, pull_request, workflow_dispatch]
+# Controls when the action will run.
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+  release:
+    # A release, pre-release, or draft of a release is published.
+    types: [published]
+  # Allows you to run this workflow manually from the Actions tab.
+  workflow_dispatch:
 
-permissions:
-  contents: write
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
-  docs:
+  # The introduction just shows some useful informations.
+  intro:
+    # The type of runner that the job will run on.
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "The name of the branch is ${{ github.ref }} and the repository is ${{ github.repository }}."
+
+
+  # The build job will build the documentation.
+  build:
+    # The type of runner that the job will run on.
+    runs-on: ubuntu-latest
+    needs: intro
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
       - name: Install dependencies
-        run: |
-          pip install sphinx sphinx_rtd_theme myst_parser
+        run: pip install sphinx sphinx_rtd_theme myst_parser
+
       - name: Sphinx build
         run: |
           sphinx-build doc _build
+
+      # Add the .nojekyll file
+      - name: nojekyll
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          touch _build/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
