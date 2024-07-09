@@ -10,9 +10,9 @@ Welcome to Branchdoc's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   doc/overview.md
-   doc/branch_types.md
-   doc/ci.md
-   doc/pull_request.md
+   overview.md
+   branch_types.md
+   ci.md
+   pull_request.md
 
 
