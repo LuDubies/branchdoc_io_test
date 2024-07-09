@@ -10,6 +10,7 @@ project = 'Branchdoc'
 copyright = '2024, Luca Dubies'
 author = 'Luca Dubies'
 release = '0.1'
+conf_py_path = "/doc/" # with leading and trailing slashes
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
