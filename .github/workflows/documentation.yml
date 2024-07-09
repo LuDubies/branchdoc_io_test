@@ -43,8 +43,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+
       - name: Install dependencies
-        run: pip install sphinx sphinx_rtd_theme myst_parser
+        run: |
+          pip install sphinx sphinx_rtd_theme sphinx-rtd-dark-mode myst_parser sphinxcontrib-mermaid
+          npm install -g @mermaid-js/mermaid-cli
 
       - name: Sphinx build
         run: |
