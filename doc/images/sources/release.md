@@ -9,7 +9,6 @@ gitGraph
    commit
    checkout main
    merge release/v2.0.x tag: "v2.0.0"
-
 ```
 
 ```mermaid
