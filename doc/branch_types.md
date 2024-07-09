@@ -18,8 +18,10 @@ gitGraph
    commit tag: "v3.0.0"
 ```
 
-    Note that the commits in the figure above are the result of merges from release branches.
-    ⚠️ Merging to the main brach has to be done via pull request with accepted review. ⚠️
+```{warning}
+Note that the commits in the figure above are the result of merges from release branches.
+⚠️ Merging to the main brach has to be done via pull request with accepted review. ⚠️
+```
 
 ## Release branches
 
@@ -64,7 +66,9 @@ gitGraph
    merge release/v3.0.x tag: "v3.0.0"
 ```
 
-    ⚠️ Merging to a release brach has to be done via pull request with accepted review. ⚠️
+```{warning}
+⚠️ Merging to a release brach has to be done via pull request with accepted review. ⚠️
+```
 
 To track fixes for an already released tag, the release branch can be kept in use. See the [bugfix brach section below](#bugfix-branches).
 

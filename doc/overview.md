@@ -1,6 +1,8 @@
 # NewTec GIT branching guidelines
 
-    NOTE: This whole documentation is a draft and work in progress. It does not represent the current guidelines of the company.
+```{note}
+This whole documentation is a draft and work in progress. It does not represent the current guidelines of the company.
+```
 
 ## Introduction
 
