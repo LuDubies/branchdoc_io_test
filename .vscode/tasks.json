@@ -15,6 +15,47 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": [
+                "sphinx-build",
+                "-M",
+                "clean",
+                "doc",
+                "_build"
+            ],
+            "problemMatcher": []
+        }
+        {
+            "label": "Open",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build"
+            ],
+            "command": [
+                "open",
+                "_build/index.html"
+            ],
+            "windows": {
+                "command": [
+                    "start",
+                    "_build/index.html"
+                ]
+            },
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            }
         }
     ]
 }
