@@ -10,27 +10,27 @@ import platform
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'NewTec Git Guidelines'
-copyright = '2024 - present, NewTec GmbH'
-author = 'NewTec GmbH'
-release = '1.0.0'
+project = "NewTec Git Guidelines"
+copyright = "2024 - present, NewTec GmbH"
+author = "NewTec GmbH"
+release = "1.0.0"
 conf_py_path = "/doc/"  # with leading and trailing slashes
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinxcontrib.mermaid',  # Mermaid diagrams
-    'myst_parser',  # MyST markdown parser
+    "sphinxcontrib.mermaid",  # Mermaid diagrams
+    "myst_parser",  # MyST markdown parser
     "sphinx_rtd_dark_mode",  # Dark mode
     "sphinx_copybutton"  # Copy button
 ]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = [
-    '_build',
-    'Thumbs.db',
-    '.DS_Store'
+    "_build",
+    "Thumbs.db",
+    ".DS_Store"
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -39,20 +39,20 @@ exclude_patterns = [
 # HTML theme and static files
 html_theme = "sphinx_rtd_theme"
 html_show_sphinx = False
-html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = "%b %d, %Y"
 
-html_static_path = ['_static']
+html_static_path = ["_static"]
 html_css_files = [
-    'css/svg.css'
+    "css/svg.css"
 ]
 
 # HTML dark theme options
 default_dark_mode = True
 
 # Mermaid configuration
-mermaid_output_format = 'svg'
-mermaid_cmd = os.path.join('node_modules', '.bin', 'mmdc')
-mermaid_params = ['--theme', 'dark', '--backgroundColor', 'transparent']
+mermaid_output_format = "svg"
+mermaid_cmd = os.path.join("node_modules", ".bin", "mmdc")
+mermaid_params = ["--theme", "dark", "--backgroundColor", "transparent"]
 
 if platform.system() == "Windows":
-    mermaid_cmd_shell = 'true'
+    mermaid_cmd_shell = "true"
