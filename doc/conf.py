@@ -23,7 +23,8 @@ extensions = [
     "sphinxcontrib.mermaid",  # Mermaid diagrams
     "myst_parser",  # MyST markdown parser
     "sphinx_rtd_dark_mode",  # Dark mode
-    "sphinx_copybutton"  # Copy button
+    "sphinx_copybutton",  # Copy button
+    "sphinx_togglebutton"  # Toggle button
 ]
 
 templates_path = ["_templates"]
@@ -55,3 +56,10 @@ mermaid_params = ["--theme", "dark", "--backgroundColor", "transparent"]
 
 if platform.system() == "Windows":
     mermaid_cmd_shell = "true"
+
+# MyST configuration
+myst_enable_extensions = ["colon_fence"]
+
+# Toggle button configuration
+togglebutton_hint = ""
+togglebutton_hint_hide = ""

@@ -8,12 +8,12 @@
 
 ### Installer
 
-In order to install Git in your computer, head to the [download page](https://git-scm.com/download/win) and choose the correct version for your operating system.In this document we assume that you are using Windows.
+In order to install Git in your computer, head to the [download page](https://git-scm.com/download/win) and choose the correct version for your operating system. In this document we assume that you are using Windows.
 
 Once you open the installer, you will go through a number of configuration screens. Below you can find the common configuration options that we use.
 
 ```{note}
-If there is screen or setting you cannot find, please contact your supervisor as the documentation may be out-of-date.
+If there is a screen or setting you cannot find, please contact your supervisor as the documentation may be out-of-date.
 
 **Current Git Release**: v2.45.2
 ```
@@ -94,3 +94,33 @@ To learn more about using Git, you can visit this [cool website](https://learngi
 - TortoiseGit
   - Similar to TortoiseSVN.
   - Provides a simple GUI to manage your local repository without using the commmand line.
+
+## Ignore Files
+
+You do not always want to commit everything on your folder, for example, lots of automatically-generated documentation.
+This is where the `.gitignore` file comes into play.
+
+[Here](https://github.com/NewTec-GmbH/template_python/blob/4d2acf95ab71a20211560b5fe9471267ede13582/.gitignore) is an example of how a common ignore file looks like for a Python project. You can add or remove lines depending on your use case but you generally want to ignore any file or folder that can be generated.
+
+:::{danger}
+Never commit sensitive data, API keys, credentials, or similar data!
+:::
+
+## gitattributes
+
+## FAQ
+
+:::{admonition} Git configuration not found on `G:/` drive.
+:class: tip
+:class: dropdown
+
+On a fresh PC installation, and after following all installation steps for Git, commands may fail with an error related to the `G:/` drive.
+This is due to the configuration being present in the `C:/` drive instead.
+
+To fix this, add the following environment variable:
+
+| Key  | Value                  |
+| ---  | ---                    |
+| HOME | `C:/Users/<your-user>` |
+
+:::
