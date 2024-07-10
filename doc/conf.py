@@ -10,7 +10,7 @@ import platform
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "NewTec Git Guidelines"
+project = "gitWorkInstructions"
 copyright = "2024 - present, NewTec GmbH"
 author = "NewTec GmbH"
 release = "1.0.0"
