@@ -59,6 +59,7 @@ if platform.system() == "Windows":
 
 # MyST configuration
 myst_enable_extensions = ["colon_fence"]
+myst_heading_anchors = 2
 
 # Toggle button configuration
 togglebutton_hint = ""

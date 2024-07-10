@@ -57,7 +57,7 @@ jobs:
 
       - name: Sphinx build
         run: |
-          sphinx-build doc _build
+          sphinx-build doc _build --fail-on-warning
 
       # Add the .nojekyll file
       - name: nojekyll

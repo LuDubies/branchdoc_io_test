@@ -48,7 +48,8 @@
             "command": [
                 "sphinx-build",
                 "doc",
-                "_build"
+                "_build",
+                "--fail-on-warning"
             ],
             "group": {
                 "kind": "build",
