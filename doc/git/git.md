@@ -86,15 +86,6 @@ git config --global init.defaultBranch main
 
 To learn more about using Git, you can visit this [cool website](https://learngitbranching.js.org/).
 
-## Integrations
-
-- Visual Studio Code:
-  - Integrated "Source Control" (`Ctrl + Shift + G`) : Tracks your changes, branches, and provides a text field for easy commits.
-  - Extension "Git Graph": Visualize your branches and commits.
-- TortoiseGit
-  - Similar to TortoiseSVN.
-  - Provides a simple GUI to manage your local repository without using the commmand line.
-
 ## Ignore Files
 
 You do not always want to commit everything on your folder, for example, lots of automatically-generated documentation.
@@ -116,6 +107,25 @@ An exception is made by generated files from tools such as Doxygen, which are us
 
 In order to standarize which files have which ending, a `.gitattributes` file should be present in your repository. [Here](https://github.com/NewTec-GmbH/template_python/blob/4d2acf95ab71a20211560b5fe9471267ede13582/.gitattributes) is an example of how a common attributes file looks like for a Python project. You can add or remove lines depending on your use case.
 
+## Integrations
+
+Integrations with 3rd-party tools may simplify the way you interact with Git, either by providing a GUI or by showing more information on your current work.
+
+:::{tip}
+These are tools that may help you, but are not necessary to use Git.
+:::
+
+- Visual Studio Code:
+  - Integrated "Source Control" (`Ctrl + Shift + G`) : Tracks your changes, branches, and provides a text field for easy commits.
+  - Extension "Git Graph": Visualize your branches and commits.
+- TortoiseGit
+  - Similar to TortoiseSVN.
+  - Provides a simple GUI to manage your local repository without using the commmand line.
+
+:::{attention}
+These are just tools! You must still understand what you are doing!
+:::
+
 ## FAQ
 
 :::{admonition} Git configuration not found on `G:/` drive.
@@ -129,6 +139,6 @@ To fix this, add the following environment variable:
 
 | Key  | Value                  |
 | ---  | ---                    |
-| HOME | `C:/Users/<your-user>` |
+| HOME | `C:\Users\<your-user>` |
 
 :::
