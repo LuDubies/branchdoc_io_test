@@ -9,12 +9,12 @@ This is the documentation for the Branchdoc. You can find the resulting GitHub P
 Used 3rd party libraries which are not part of the standard Python package:
 
 * [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html) - Powerful documentation generator that has many great features for writing technical documentation - BSD-2 License
-* [sphinx-rtd-theme](https://github.com/uiri/toml) - aasdasds - MIT License
-* [sphinx-rtd-dark-mode](https://github.com/uiri/toml) - aasdasds - MIT License
-* [sphinxcontrib-mermaid](https://github.com/uiri/toml) - aasdasds - MIT License
-* [sphinx-copybutton](https://github.com/uiri/toml) - aasdasds - MIT License
+* [sphinx-rtd-theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) - Read the Docs theme for Sphinx. - MIT License
+* [sphinx-rtd-dark-mode](https://github.com/MrDogeBro/sphinx_rtd_dark_mode) - Adds a toggleable dark mode to the Read the Docs theme for Sphinx. - MIT License
+* [sphinxcontrib-mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid) - Mermaid diagrams in yours sphinx powered docs. - BSD-2 License
+* [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton) - Add a "copy" button to code blocks in Sphinx. - MIT License
 * [myst-parser](https://github.com/executablebooks/MyST-Parser) - An extended commonmark compliant parser, with bridges to docutils/sphinx. - MIT License
-* [mermaid-js/mermaid-cli](https://github.com/mermaid-js/mermaid-cli) - Command line tool for the Mermaid library - MIT License
+* [mermaid-js/mermaid-cli](https://github.com/mermaid-js/mermaid-cli) - Command line tool for the Mermaid library. - MIT License
 
 ## Issues, Ideas And Bugs
 
